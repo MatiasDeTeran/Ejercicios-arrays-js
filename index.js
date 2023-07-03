@@ -194,6 +194,8 @@ valorInicial);
 
 console.log(sumaa);
 
+// ==================EJERCICIOS APLICADOS A FUNCIONES====================
+
 
 // PROBLEMA DE SUMA DE ELEMENTOS
 
@@ -267,6 +269,59 @@ function eliminarDuplicados(array){
 
 }
 
-let arrayyy=[1, 2, 3, 4, 5];
+// PROBLEMA ORDENACION DE NUMEROS
 
-console.log(arrayyy[0]);
+// a. Crea una función llamada ordenarNumeros que reciba un array de números
+// como parámetro.
+// b. La función debe ordenar los números de forma ascendente y devolver el
+// array ordenado.
+// c. Prueba la función con diferentes arrays de números y verifica que se ordenen
+// correctamente.
+
+function ordenarNumeros(array){
+    console.log(array.sort());    
+}
+
+let numeros5=[5, 7, 2, 9, 3, 4, 7];
+ordenarNumeros(numeros5);
+
+// PROBLEMA DE CONTEO DE ELEMENTOS
+
+// a. Crea una función llamada contarElementos que reciba un array y un
+// elemento como parámetros.
+// b. La función debe contar cuántas veces aparece el elemento en el array y
+// devolver el resultado.
+// c. Prueba la función con diferentes arrays y elementos para verificar su
+// funcionamiento.
+
+function contarElementos(array, numeros){
+    let contador=0;
+    array.filter(function (x){
+        if(x===numeros){
+            contador = contador + 1
+        };
+    return contador;
+    })
+}
+
+let numeros6=[1, 2, 3, 2, 4, 2, 5, 2];
+console.log(contarElementos(numeros6, 2));
+
+
+// PROBLEMA DE MEZCLA DE ARRAYS
+
+// a. Crea una función llamada mezclarArrays que reciba dos arrays como
+// parámetros.
+// b. La función debe combinar los elementos de ambos arrays en uno nuevo y
+// devolverlo.
+// c. Prueba la función con diferentes arrays y verifica los elementos
+
+function mezclarArrays(array1, array2){
+    array3=array1.concat(array2);
+    return array3;
+}
+
+let array_1= [1, 2, 3, 4];
+let array_2= [5, 6, 7, 8];
+
+console.log(mezclarArrays(array_1,array_2));
