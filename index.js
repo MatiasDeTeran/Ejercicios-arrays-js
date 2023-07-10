@@ -172,7 +172,7 @@ console.log(edadMayor);
 let notas= [7, 5, 9, 3];
 
 notas2= notas.some(function (x){
-    return x >= 8;  
+    return x >= 8;
 })
 
 console.log(notas2);
@@ -189,7 +189,7 @@ let valorInicial= 0
 let sumaa= numeros4.reduce(function(acumulador, valorActual){
     acumulador= acumulador + valorActual;
     return acumulador;
-}, 
+},
 valorInicial);
 
 console.log(sumaa);
@@ -209,7 +209,7 @@ function sumarElementos(array){
     let sumaa= array.reduce(function(acumulador, valorActual){
         acumulador= acumulador + valorActual;
         return acumulador;
-    }, 
+    },
     valorInicial);
     console.log(sumaa);
 }
@@ -230,7 +230,7 @@ function calcularPromedio(array){
     let sumaa= array.reduce(function(acumulador, valorActual){
         acumulador= acumulador + valorActual;
         return acumulador;
-    }, 
+    },
     valorInicial);
     return sumaa / array.length
 };
@@ -279,7 +279,7 @@ function eliminarDuplicados(array){
 // correctamente.
 
 function ordenarNumeros(array){
-    console.log(array.sort());    
+    console.log(array.sort());
 }
 
 let numeros5=[5, 7, 2, 9, 3, 4, 7];
@@ -307,6 +307,19 @@ function contarElementos(array, numeros){
 let numeros6=[1, 2, 3, 2, 4, 2, 5, 2];
 console.log(contarElementos(numeros6, 2));
 
+// PROBLEMA DE CONTEO DE ELEMENTOS
+
+// a. Crea una función llamada contarElementos que reciba un array y un
+// elemento como parámetros.
+// b. La función debe contar cuántas veces aparece el elemento en el array y
+// devolver el resultado.
+// c. Prueba la función con diferentes arrays y elementos para verificar su
+// funcionamiento.
+
+
+function contarElementos(array, elemento){
+
+}
 
 // PROBLEMA DE MEZCLA DE ARRAYS
 
@@ -325,3 +338,233 @@ let array_1= [1, 2, 3, 4];
 let array_2= [5, 6, 7, 8];
 
 console.log(mezclarArrays(array_1,array_2));
+
+
+// ====================== MAS EJERCICIOS DE ARRAYS =============================
+
+// Doblar números:
+
+// Crea una función que tome un array de números y devuelva un nuevo array donde cada
+// número sea el doble del original.
+// Ejemplo:
+// Input: [1, 2, 3, 4]
+// Output: [2, 4, 6, 8]
+
+function doblarNumeros(array){
+    return array.map(function (numero){
+        return numero*2;
+    })
+};
+console.log(doblarNumeros(array_1));
+
+// Nombre a mayúsculas:
+
+
+// Crea una función que tome un array de nombres y los transforme todos a mayúsculas.
+// Ejemplo:
+// Input: ['Pedro', 'Ana', 'Juan']
+// Output: ['PEDRO', 'ANA', 'JUAN']
+// Intermedio
+
+
+function nombresMayuscula(array){
+    array2=array.map(function(nombre){
+        nombre=nombre.toUpperCase();
+        return nombre;
+    })
+    return array2
+}
+
+console.log(nombresMayuscula(nombres));
+
+
+// Cuadrado de números:
+
+
+// Crea una función que tome un array de números y devuelva un nuevo array donde cada
+// número sea el cuadrado del original.
+// Ejemplo:
+// Input: [1, 2, 3, 4]
+// Output: [1, 4, 9, 16]
+
+function cuadradoNumero(array){
+    array=array.map(function (numero){
+        numero=numero**2;
+        return numero;
+    })
+    return array
+}
+let numerosCuadrados=[1,2,3,4,5];
+console.log(cuadradoNumero(numerosCuadrados));
+
+
+// Primera letra de cada palabra:
+
+
+// Dado un array de palabras, crea una función que devuelva un nuevo array donde cada
+// elemento sea la primera letra de cada palabra.
+// Ejemplo:
+// Input: ['Hola', 'mundo', 'desde', 'JavaScript']
+// Output: ['H', 'm', 'd', 'J']
+
+function primeraLetra(array){
+    array2= array.map(function (palabra){
+        palabra=palabra[0];
+        return palabra;
+    })
+    return array2;
+}
+
+let palabras2= ["gianna", "matias", "shushu", "haziel"];
+console.log(primeraLetra(palabras2));
+
+
+// Filtrar números pares:
+
+
+// Crea una función que tome un array de números y devuelva un nuevo array que contenga sólo
+// los números pares.
+// Ejemplo:
+// Input: [1, 2, 3, 4, 5, 6]
+// Output: [2, 4, 6]
+
+let numeros7=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function numerosPares(array){
+    array2=array.filter(function (numero){
+        return numero%2==0;
+    })
+    return array2;
+}
+console.log(numerosPares(numeros7));
+
+
+// Filtrar palabras largas:
+
+
+// Crea una función que tome un array de palabras y devuelva un nuevo array que contenga sólo
+// las palabras que tienen más de 4 letras.
+// Ejemplo:
+// Input: ['Hola', 'yo', 'soy', 'JavaScript']
+// Output: ['Hola', 'JavaScript']
+
+function palabras4Letras(array){
+    array= array.filter(function (palabra){
+        return palabra.length>2;
+
+    })
+    return array;
+}
+
+let palabras3= ["trenes", "camoines", "tractores", "yo", "te", "motos"];
+
+console.log(palabras4Letras(palabras3));
+
+
+// Filtrar palabras que empiezan con una letra específica:
+
+
+// Crea una función que tome un array de palabras y una letra. La función debería devolver un
+// nuevo array que contenga sólo las palabras que comienzan con esa letra.
+// Ejemplo:
+// Input: ['manzana', 'banana', 'mango', 'naranja'] y 'm'
+// Output: ['manzana', 'mango']
+
+function letraEspecifica(array, letra){
+    array= array.filter(function (palabra){
+        return palabra[0]==letra;
+    })
+    return array
+
+}
+
+let palabras4=["matias", "martin", "nacho", "gianna"];
+console.log(letraEspecifica(palabras4, "m"));
+
+// Sumar números:
+
+
+// Crea una función que tome un array de números y devuelva la suma de todos los números en
+// el array.
+// Ejemplo:
+// Input: [1, 2, 3, 4, 5]
+// Output: 15
+
+
+function sumarNumeros(array){
+    let valor1=0
+
+    array= array.reduce(function (acumulador, numero){
+        acumulador=acumulador+numero;
+        return acumulador;
+    }, valor1);
+    return array;
+
+}
+
+let numeros8=[10, 10, 10, 10, 10, 10];
+console.log(sumarNumeros(numeros8));
+
+
+// Concatenar cadenas:
+
+
+// Crea una función que tome un array de palabras y las combine todas en una sola cadena.
+// Ejemplo:
+// Input: ['Hola', 'mundo', 'desde', 'JavaScript']
+// Output: 'Hola mundo desde JavaScript'
+
+
+function concatenarArray(array){
+    array= array.join(" ");
+    return array;
+}
+
+let palabras5= ["hola", "buen", "dia", "me", "llamo", "Matias"];
+console.log(concatenarArray(palabras5));
+
+
+// Producto de números:
+
+
+// Crea una función que tome un array de números y devuelva el producto de todos los números
+// en el array.
+// Ejemplo:
+// Input: [1, 2, 3, 4]
+// Output: 24
+
+
+function producto(array){
+
+    array= array.reduce(function (acumulador, numero){
+        acumulador= acumulador*numero;
+        return acumulador;
+
+    })
+    return array;
+}
+
+let numeros9= [2, 3, 10, 10]
+console.log(producto(numeros9));
+
+
+// Contar ocurrencias de una letra:
+
+
+// Crea una función que tome una cadena de texto y una letra, y devuelva el número de veces
+// que aparece esa letra en la cadena.
+// Ejemplo:Input: 'hola mundo desde javascript', 'o'
+// Output: 2
+
+function contarLetra(array, letra){
+    let contador2=0
+    for (let i=0; i < array.length;i++ ){
+        if (array[i]=== letra){
+            contador2= contador2+1;
+        }
+        
+    }
+    return contador2;
+}
+let frase="hola como estas"
+console.log(contarLetra(frase, "s"));
