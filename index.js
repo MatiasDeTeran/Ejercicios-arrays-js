@@ -568,3 +568,18 @@ function contarLetra(array, letra){
 }
 let frase="hola como estas"
 console.log(contarLetra(frase, "s"));
+
+
+
+// ============================EJERCICIOS ARRAYS MULTIDIMENSIONALES===============================
+
+
+// Crear una matriz de 5 filas y n columnas (se pide al usuario). Rellenarlo con números aleatorios entre 0 y 10.
+let nUsuario=prompt("ingrese un valor");
+let multiArray= [[], [], [], [], []];
+for(let j=0; j < multiArray.length; j++){
+    for (let h=0; h< nUsuario; h++){
+        multiArray[j].push(Math.round(Math.random()*10));
+    }
+}
+console.log(multiArray);
